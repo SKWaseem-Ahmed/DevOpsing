@@ -1,0 +1,18 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: devopstube-backend
+    ports:
+      - "5151:5050"   # mapping host port 5151 to container port 5050
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: devopstube-frontend
+    ports:
+      - "3000:80"     # mapping host port 3000 to container port 80 (nginx)
+    restart: unless-stopped
