@@ -32,10 +32,10 @@ pipeline {
         // }
     }
 
-    post {
-        always {
-            echo 'Cleaning up containers...'
-            sh 'docker-compose down'
-        }
-    }
+    // post {
+    //     always {
+    //         echo 'Cleaning up containers...'
+    //         sh 'docker-compose down'
+    //     }
+    // }
 }
