@@ -16,7 +16,7 @@ app.get("/api/videos", (req, res) => {
         { id: 2, title: "CI/CD Explained", url: "https://youtu.be/scEDHsr3APg?si=kO9C3mMMRfYjW7NK" },
         { id: 2, title: "DevSecOps Explained", url: "https://www.youtube.com/watch?v=atWfA2TW0K0" },
         { id: 2, title: "Mastering DevOps", url: "https://www.youtube.com/watch?v=PfjVXb-YXbQ" },
-        
+        { id: 2, title: "Mastering DevOps", url: "https://www.youtube.com/watch?v=ySlMUYTBnv0" },
     ]);
 });
 
