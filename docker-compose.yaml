@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
     container_name: devopstube-backend
     ports:
-      - "5151:5050"   # mapping host port 5151 to container port 5050
+      - "5050:5050"   # mapping host port 5151 to container port 5050
     restart: unless-stopped
 
   frontend:
