@@ -1,0 +1,13 @@
+backend:
+  image:
+    repository: waseemahmedazlan/devopstube-backend
+    tag: latest
+  service:
+    port: 5050
+
+frontend:
+  image:
+    repository: waseemahmedazlan/devopstube-frontend
+    tag: latest
+  service:
+    port: 80
