@@ -20,7 +20,7 @@ app.get("/api/videos", (req, res) => {
     ]);
 });
 
-const PORT = 5050;
+const PORT = 5151;
 
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`Backend API running on http://localhost:${PORT}`);
