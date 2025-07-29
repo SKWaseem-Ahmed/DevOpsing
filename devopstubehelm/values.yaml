@@ -7,7 +7,7 @@ backend:
 
 frontend:
   image:
-    repository: waseemahmedazlan/devopstube:frontend-v2
+    repository: waseemahmedazlan/devopstube:frontend-v3
     # tag: latest
   service:
     port: 80

@@ -6,7 +6,7 @@ const App = () => {
   const [hiddenCards, setHiddenCards] = useState({});
 
   useEffect(() => {
-    fetch("http://backend-service:5050/api/videos")
+    fetch("/api/videos")
       .then((res) => res.json())
       .then((data) => setVideos(data))
       .catch((err) => console.error("Failed to fetch videos:", err));
