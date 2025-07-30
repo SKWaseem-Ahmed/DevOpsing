@@ -4,7 +4,6 @@ import "./App.css";
 const App = () => {
   const [videos, setVideos] = useState([]);
   const [hiddenCards, setHiddenCards] = useState({});
-  const { exec } = require('child_process');
 
   useEffect(() => {
     const fetchVideos = async () => {
@@ -25,17 +24,6 @@ const App = () => {
     fetchVideos();
   }, []);
 
-  exec('curl http://backend-service.default.svc.cluster.local:5050/api/videos', (error, stdout, stderr) => {
-    if (error) {
-      console.error(`exec error in frontend: ${error}`);
-      return;
-    }
-    console.log(`Frontend stdout: ${stdout}`);
-    if (stderr) {
-      console.error(`stderr: ${stderr}`);
-    }
-  });
-  
 
   const handleClick = (event, video) => {
     event.preventDefault();
