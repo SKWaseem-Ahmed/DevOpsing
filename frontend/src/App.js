@@ -6,11 +6,24 @@ const App = () => {
   const [hiddenCards, setHiddenCards] = useState({});
 
   useEffect(() => {
-    fetch("/api/videos")
-      .then((res) => res.json())
-      .then((data) => setVideos(data))
-      .catch((err) => console.error("Failed to fetch videos:", err));
+    const fetchVideos = async () => {
+      try {
+        const res = await fetch("http://backend-service.default.svc.cluster.local:5050/api/videos");
+  
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+  
+        const data = await res.json();
+        setVideos(data);
+      } catch (err) {
+        console.error("Failed to fetch videos:", err.message);
+      }
+    };
+  
+    fetchVideos();
   }, []);
+  
 
   const handleClick = (event, video) => {
     event.preventDefault();
