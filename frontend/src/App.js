@@ -8,7 +8,7 @@ const App = () => {
   useEffect(() => {
     const fetchVideos = async () => {
       try {
-        const res = await fetch("http://backend-service.default.svc.cluster.local:5050/api/videos");
+        const res = await fetch("http://127.0.0.1:63578/api/videos");
   
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
